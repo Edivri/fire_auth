@@ -37,7 +37,7 @@ class _SignInScreenState extends State<SignInScreen> {
     return Image.asset(
       imageName,
       fit: BoxFit.fitWidth,
-      width: 240,
+      width: 440,
       height: 240,
       color: Colors.white
     );
