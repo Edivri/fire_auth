@@ -42,11 +42,34 @@ class _SignInScreenState extends State<SignInScreen> {
                     height: 30,
                   ),
                   reusableTextField("Enter Password", Icons.lock_outline, false, _passwordTextController),
+                     SizedBox(
+                    height: 20,
+                  ),
+                  signInSignUpButton(context, true, (){
+
+                  })
 
                 ]),)),),
         
       
     );
   }
- 
+ Row signUpOption(){
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      const Text("Don't have account?",
+      style: TextStyle(color: Colors.white70)),
+      GestureDetector(
+        onTap: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+        },
+        child: const Text(
+          "Sign Up",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      )
+    ],
+    );
+ }
 }
