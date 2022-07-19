@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:fire_auth/reusable_widgets/reusable_widget.dart';
+import 'package:fire_auth/screens/signup_screen.dart';
 import 'package:fire_auth/utils/color_utils.dart';
 import 'package:flutter/material.dart';
 
