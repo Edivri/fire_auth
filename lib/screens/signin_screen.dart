@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:fire_auth/reusable_widgets/reusable_widget.dart';
 import 'package:fire_auth/utils/color_utils.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +12,8 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
+  TextEditingController _passwordTextController = TextEditingController();
+  TextEditingController _emailTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +33,16 @@ class _SignInScreenState extends State<SignInScreen> {
                 child: Column(
                 children: <Widget>[
                   logoWidget("images/logo.png"),
+                  // ignore: prefer_const_constructors
+                  SizedBox(
+                    height: 30,
+                  ),
+                  reusableTextField("Enter Username", Icons.person_outline, false, _emailTextController),
+                     SizedBox(
+                    height: 30,
+                  ),
+                  reusableTextField("Enter Password", Icons.lock_outline, false, _passwordTextController),
+
                 ]),)),),
         
       
