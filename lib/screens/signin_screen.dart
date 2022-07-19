@@ -1,3 +1,4 @@
+import 'package:fire_auth/reusable_widgets/reusable_widget.dart';
 import 'package:fire_auth/utils/color_utils.dart';
 import 'package:flutter/material.dart';
 
@@ -33,13 +34,5 @@ class _SignInScreenState extends State<SignInScreen> {
       
     );
   }
-  Image logoWidget(String imageName){
-    return Image.asset(
-      imageName,
-      fit: BoxFit.fitWidth,
-      width: 440,
-      height: 240,
-      color: Colors.white
-    );
-  }
+ 
 }
