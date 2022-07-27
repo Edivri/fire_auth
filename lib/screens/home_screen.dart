@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:fire_auth/screens/signin_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,8 +19,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: ElevatedButton(
           child: Text("Logout"),
           onPressed: () {
-            Navigator.push(context,
+            FirebaseAuth.instance.signOut().then((value){
+              Navigator.push(context,
                 MaterialPageRoute(builder: (context) => SignInScreen()));
+            });
+            
           },
         ),
       ),
